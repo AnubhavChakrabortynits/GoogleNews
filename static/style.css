@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 5px;
+  text-decoration: underline;
+  color: aliceblue;
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(45deg, violet 50%, black 100%);
+  color: white;
+  padding: 1rem 1rem 0rem 1rem;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-weight: bolder !important;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textarea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.form-floating {
+  min-width: 75%;
+  border: 2px solid white;
+  border-radius: 12px;
+}
+
+.buttoncont {
+  margin-top: 1rem;
+  width: 75%;
+  display: flex;
+  justify-content: flex-end;
+}
+.button {
+  width: 10rem;
+  height: 3rem;
+  background-color: rgb(41, 35, 42);
+  border-radius: 1rem;
+  font-weight: 700;
+  color: white;
+  border: 1px solid white;
+}
+
+.headline {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+}
+.resulttitle {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Times New Roman", Times, serif "Lucida Sans Unicode", Geneva,
+    Verdana, sans-serif;
+  font-weight: bolder !important;
+  color: white;
+  font-size: 2rem;
+}
+.resultdiv {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  width: 85%;
+}
+
+.tr {
+  background-color: black !important;
+  color: white !important;
+}
+@media (max-width: 450px) {
+  .resulttitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
