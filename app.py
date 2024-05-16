@@ -5,6 +5,7 @@ from views import views
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('wordnet')
 
 app = Flask(__name__)
 app.register_blueprint(views,url_prefix='/views')
