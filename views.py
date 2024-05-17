@@ -14,9 +14,9 @@ def index():
         if(not text):
            return render_template('index.html')
         
-        if naive_bayes_model is not None:
+        if naive_bayes_model is None:
             naive_bayes_model = load('models/naive_bayes_model_lite.joblib') 
-        if tfidf_model is not None:
+        if tfidf_model is None:
             tfidf_model = load('models/tfidf_vectorizer_model_lite.joblib')
         
         queries = [text]    
