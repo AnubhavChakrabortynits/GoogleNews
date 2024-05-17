@@ -7,10 +7,13 @@ tfidf_model = None
 
 @views.route('/',methods=['GET','POST'])
 def index():
+    global naive_bayes_model
+    global tfidf_model
     if request.method == 'POST':
         text = request.form.get('textarea')
         if(not text):
            return render_template('index.html')
+        
         if naive_bayes_model is not None:
             naive_bayes_model = load('models/naive_bayes_model_lite.joblib') 
         if tfidf_model is not None:
