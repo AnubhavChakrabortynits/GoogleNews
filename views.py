@@ -2,15 +2,20 @@ from utils import *
 from flask import Blueprint,render_template,request
 views = Blueprint("views",__name__)
 
+naive_bayes_model = None
+tfidf_model = None
+
 @views.route('/',methods=['GET','POST'])
 def index():
     if request.method == 'POST':
         text = request.form.get('textarea')
         if(not text):
            return render_template('index.html')
+        if naive_bayes_model is not None:
+            naive_bayes_model = load('models/naive_bayes_model_lite.joblib') 
+        if tfidf_model is not None:
+            tfidf_model = load('models/tfidf_vectorizer_model_lite.joblib')
         
-        naive_bayes_model = load('models/naive_bayes_model_lite.joblib') 
-        tfidf_model = load('models/tfidf_vectorizer_model_lite.joblib')
         queries = [text]    
         results = predict(queries,naive_bayes_model,tfidf_model)
         print(results[0]) 
